@@ -40,7 +40,7 @@ namespace ImageUploadAndRetrieve.Controllers
                 string filename = Path.GetFileNameWithoutExtension(model.File.FileName);
                 string extension = Path.GetExtension(model.File.FileName);
 
-                string path = filename + new Guid() + extension;
+                string path = filename +  Guid.NewGuid() + extension;
 
                 var img = new Image()
                 {
